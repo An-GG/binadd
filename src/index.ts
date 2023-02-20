@@ -5,7 +5,7 @@ import { existsSync, realpathSync, rmSync } from "fs";
 import { basename } from "path";
 import { homedir } from "os";
 import { resolve } from "path";
-import * as rl from "readline"
+let rl:any = require("readline-promise").default
 
 async function main() {
 
@@ -23,7 +23,7 @@ Example:
         process.exit();
     }
 
-    let question = (q:string)=>{ return rl.promises.createInterface(process.stdin, process.stdout).question(q) }
+    let question = (q:string)=>{ return rl.createInterface(process.stdin, process.stdout).question(q) }
 
     let ex = resolve(process.argv[2])
     let name = basename(ex)

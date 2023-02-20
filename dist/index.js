@@ -6,7 +6,7 @@ const fs_1 = require("fs");
 const path_1 = require("path");
 const os_1 = require("os");
 const path_2 = require("path");
-const rl = require("readline");
+let rl = require("readline-promise").default;
 async function main() {
     if (process.argv.length < 3 || process.argv.length > 4 || process.argv[2] == '-h' || process.argv[2] == '--help') {
         console.log(`
@@ -21,7 +21,7 @@ Example:
 `);
         process.exit();
     }
-    let question = (q) => { return rl.promises.createInterface(process.stdin, process.stdout).question(q); };
+    let question = (q) => { return rl.createInterface(process.stdin, process.stdout).question(q); };
     let ex = (0, path_2.resolve)(process.argv[2]);
     let name = (0, path_1.basename)(ex);
     console.log("appname: " + name);
