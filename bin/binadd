@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+SCRIPT_DIR=$(readlink -f $0)
+SCRIPT_DIR=$(dirname -- "$SCRIPT_DIR")
+SCRIPT_DIR=$(dirname -- "$SCRIPT_DIR")
+node "$SCRIPT_DIR/dist/index.js" "$@"
