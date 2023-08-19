@@ -1,6 +1,6 @@
 # binadd
     
-quickly add some executable to your path
+quickly add some executable to your `~/.local/bin` via `ln -s`
 
 ## Setup
 
@@ -12,6 +12,12 @@ npx tsc --build tsconfig.json       #build products are provided in dist/ so thi
 
 # Add binadd to ~/.local/bin with binadd
 ./bin/binadd ./bin/binadd
+```
+
+## Add ~/.local/bin to your $PATH by adding this line to your startup script `~/.zshrc`
+
+```
+export PATH="$PATH:~/.local/bin"
 ```
 
 ## Usage
