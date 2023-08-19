@@ -18,6 +18,9 @@ npx tsc --build tsconfig.json       #build products are provided in dist/ so thi
 
 ```
 export PATH="$PATH:~/.local/bin"
+
+# check
+echo $PATH | sed 's/:/\n/g'
 ```
 
 ## Usage
