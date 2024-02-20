@@ -14,7 +14,7 @@ npx tsc --build tsconfig.json       #build products are provided in dist/ so thi
 ./bin/binadd ./bin/binadd
 ```
 
-## Add $HOME/.local/bin to your $PATH by adding this line to your startup script `~/.zshrc`
+## Add ~/.local/bin to your $PATH by adding this line to your startup script `~/.zshrc`
 `~` ***does not get translated automatically by zsh***
 
 ```
