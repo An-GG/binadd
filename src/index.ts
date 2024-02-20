@@ -63,8 +63,8 @@ Example:
     }
 
     try { 
-        process.stdout.write(execSync("ln -s "+ex+" "+bin))
-        process.stdout.write(execSync("ls -la "+bin))
+        process.stdout.write(execSync("ln -s \""+ex+"\" \""+bin+"\""))
+        process.stdout.write(execSync("ls -la \""+bin+"\""))
         process.exit(0);
     } catch(e) {
         console.log((e as Error).message);

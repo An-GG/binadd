@@ -56,8 +56,8 @@ Example:
         }
     }
     try {
-        process.stdout.write((0, child_process_1.execSync)("ln -s " + ex + " " + bin));
-        process.stdout.write((0, child_process_1.execSync)("ls -la " + bin));
+        process.stdout.write((0, child_process_1.execSync)("ln -s \"" + ex + "\" \"" + bin + "\""));
+        process.stdout.write((0, child_process_1.execSync)("ls -la \"" + bin + "\""));
         process.exit(0);
     }
     catch (e) {
