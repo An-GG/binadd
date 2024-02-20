@@ -17,7 +17,7 @@ npx tsc --build tsconfig.json       #build products are provided in dist/ so thi
 ## Add ~/.local/bin to your $PATH by adding this line to your startup script `~/.zshrc`
 
 ```
-export PATH="$PATH:~/.local/bin"
+export PATH="$PATH:$HOME/.local/bin"
 
 # check
 echo $PATH | sed 's/:/\n/g'
