@@ -14,7 +14,8 @@ npx tsc --build tsconfig.json       #build products are provided in dist/ so thi
 ./bin/binadd ./bin/binadd
 ```
 
-## Add ~/.local/bin to your $PATH by adding this line to your startup script `~/.zshrc`
+## Add $HOME/.local/bin to your $PATH by adding this line to your startup script `~/.zshrc`
+`~` ***does not get translated automatically by zsh***
 
 ```
 export PATH="$PATH:$HOME/.local/bin"
@@ -26,7 +27,7 @@ echo $PATH | sed 's/:/\n/g'
 ## Usage
 ```
 binadd: 
-    shortcut to symlink some binary to ~/.local/bin. useful on mac because ~ does not get translated automatically by ln.
+    shortcut to symlink some binary to ~/.local/bin. useful on mac because ~ does not get translated automatically by zsh.
 
 Example:
     binadd ./build/out
